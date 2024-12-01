@@ -1,0 +1,95 @@
+:root{
+    --borderRadius: 10px;
+  }
+  
+  body {
+    color: white;
+    display: flex;
+  }
+  
+  main {
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .card {
+    padding: 40px;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .card p {
+    flex: 1
+  }
+  
+  .card button {
+    height: 60px;
+    border-radius: var(--borderRadius);
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 3px white;
+    color: white;
+  }
+  
+  .card button:hover {
+    background-color: white;
+  }
+  
+  .card button:active {
+    transform: translate(4px, 4px);
+    background-color: white;
+  }
+  
+  .card1 button:hover, button:active {
+    color: rgb(255, 174, 0);;
+  }
+  .card2 button:hover, button:active {
+    color: rgb(8, 144, 198);
+  }
+  .card3 button:hover, button:active {
+    color: rgb(41, 58, 153);
+  }
+  
+  .card1 {
+    background-color: rgb(255, 174, 0);
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+  }
+  
+  .card2 {
+    background-color: rgb(8, 144, 198);
+  }
+  
+  .card3 {
+    background-color: rgb(41, 58, 153);
+    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+  }
+  
+  @media screen and (min-width: 600px) {
+    body {
+      align-items: center;
+      height: 100vh;
+    }
+  
+    main {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .card {
+      max-width: 250px;
+      min-width: 250px;
+    }
+  
+    .card1 {
+      border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+    }
+  
+    .card3 {
+      border-radius: 0 var(--borderRadius) var(--borderRadius) 0;
+    }
+  }
